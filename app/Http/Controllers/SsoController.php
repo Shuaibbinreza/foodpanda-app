@@ -12,7 +12,8 @@ class SsoController extends Controller
 {
     public function redirectToAuth()
     {
-        $authUrl = "http://127.0.0.1:8085/login?redirect_url=" . urlencode("http://127.0.0.1:8081/callback");
+        // $authUrl = "http://127.0.0.1:8000/login?redirect_url=" . urlencode("http://127.0.0.1:8001/callback");
+        $authUrl = url(env('AUTH_SERVER_URL') . '/login?redirect_url=' . urlencode(env('APP_CALLBACK_URL')));
 
         return redirect($authUrl);
     }
