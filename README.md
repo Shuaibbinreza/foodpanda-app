@@ -33,6 +33,12 @@ A Laravel-based food delivery management application with SSO authentication.
 - `axios` ^1.11.0 - HTTP client
 - `vite` ^7.0.7 - Build tool
 
+## Prerequisites
+
+- **ecommerce-app** must be running on **port 8000** before starting this application.
+  - Repository: https://github.com/Shuaibbinreza/ecommerce-app
+  - Follow the installation instructions in that repository first.
+
 ## Installation
 
 1. Clone the repository:
@@ -62,9 +68,9 @@ php artisan key:generate
 php artisan migrate
 ```
 
-6. Start the development server:
+6. Start the development server on port 8001:
 ```bash
-php artisan serve
+php artisan serve --port=8001
 ```
 
 ## Routes
